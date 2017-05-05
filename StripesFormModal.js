@@ -4,6 +4,8 @@ import { isDirty } from 'redux-form';
 import Modal from '@folio/stripes-components/lib/Modal';
 import Button from '@folio/stripes-components/lib/Button';
 
+import css from './StripesFormModal.css';
+
 export default class StripesFormModal extends Component {
     render() {
         return (

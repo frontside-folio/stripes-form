@@ -4,9 +4,6 @@ import { isDirty } from 'redux-form';
 import { withRouter } from 'react-router'
 import { submit } from 'redux-form';
 
-import {Prompt} from 'react-router-dom'
-
-
 import StripesFormModal from './StripesFormModal';
 
 class StripesFormWrapper extends Component {
@@ -71,7 +68,7 @@ class StripesFormWrapper extends Component {
 
     render() {  
         return (
-           <div style={{ width: '100%', minWidth: this.state.contentMinWidth, height: '100%', overflow: 'auto' }}>
+           <div>
                 <this.props.Form {...this.props } />
                 <StripesFormModal 
                     openWhen={this.state.openModal} 
