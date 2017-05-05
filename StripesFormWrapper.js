@@ -47,7 +47,7 @@ class StripesFormWrapper extends Component {
     }
 
     saveChanges() {
-        console.log(submit);
+        
         this.props.dispatch(submit(this.props.formOptions.form));
 
         if(this.props.invalid) {
@@ -77,6 +77,7 @@ class StripesFormWrapper extends Component {
                     openWhen={this.state.openModal} 
                     saveChanges={this.saveChanges} 
                     discardChanges={this.continue}
+                    remoteSave={this.props.formOptions.allowRemoteSave}
                     closeCB={this.closeModal} 
                 />
             </div>

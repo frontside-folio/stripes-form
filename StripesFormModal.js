@@ -8,7 +8,7 @@ export default class StripesFormModal extends Component {
     render() {
         return (
             <Modal open={this.props.openWhen} label="There are unsaved changes">
-                <Button onClick={this.props.saveChanges}>Save Changes</Button>
+                {this.props.remoteSave && <Button onClick={this.props.saveChanges}>Save Changes</Button>}
                 <Button onClick={this.props.discardChanges}>Discard Changes</Button>
                 <Button onClick={this.props.closeCB}>Cancel</Button>
             </Modal>
