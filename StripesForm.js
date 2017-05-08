@@ -15,7 +15,7 @@ export default function StripesForm(opts) {
 				);
 			}
 		});
-		
+
 		return reduxForm(opts)(opts.connect?connect(StripesForm, opts.connect):StripesForm);
 	};
 }
