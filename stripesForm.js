@@ -4,7 +4,7 @@ import { connect } from '@folio/stripes-connect'; // eslint-disable-line
 
 import StripesFormWrapper from "./StripesFormWrapper";
 
-export default function StripesForm(opts) {
+export default function stripesForm(opts) {
 	return function(Form) {
 
 		var StripesForm = React.createClass({
@@ -16,6 +16,6 @@ export default function StripesForm(opts) {
 			}
 		});
 
-		return reduxForm(opts)(opts.connect?connect(StripesForm, opts.connect):StripesForm);
+		return reduxForm(opts)(StripesForm);
 	};
 }
