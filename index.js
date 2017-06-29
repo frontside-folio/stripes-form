@@ -1,1 +1,1 @@
-export {default} from './StripesForm'
+export { default } from './stripesForm';
