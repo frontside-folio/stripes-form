@@ -80,6 +80,7 @@ StripesFormWrapper.propTypes = {
   formOptions: PropTypes.shape({
     allowRemoteSave: PropTypes.bool,
     navigationCheck: PropTypes.bool,
+    form: PropTypes.object,
   }),
   history: PropTypes.shape({
     block: PropTypes.func,
