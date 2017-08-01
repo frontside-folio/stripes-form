@@ -2,6 +2,7 @@
 
 ## 0.9.0 (In Progress)
 * Update redux-form dependecy to 7.0.3
+* Update stripes-components to 1.4.0.
 
 ## [0.8.0](https://github.com/folio-org/stripes-form/tree/v0.8.0) (2017-06-30)
 * Refactoring to make eslint happier. Fixes STRIPES-428.
