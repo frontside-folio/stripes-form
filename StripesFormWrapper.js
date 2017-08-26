@@ -22,13 +22,14 @@ class StripesFormWrapper extends Component {
   componentDidMount() {
     if (this.props.formOptions.navigationCheck) {
       this.unblock = this.props.history.block((nextLocation) => {
-        if (this.props.dirty) {
+        const shouldPrompt = this.props.dirty && !this.props.submitSucceeded;
+        if (shouldPrompt) {
           this.setState({
             openModal: true,
             nextLocation,
           });
         }
-        return !this.props.dirty;
+        return !shouldPrompt;
       });
     }
   }
