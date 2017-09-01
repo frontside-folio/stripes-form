@@ -90,6 +90,7 @@ StripesFormWrapper.propTypes = {
   dirty: PropTypes.bool,
   dispatch: PropTypes.func,
   invalid: PropTypes.bool,
+  submitSucceeded: PropTypes.bool,
 };
 
 export default withRouter(StripesFormWrapper);
