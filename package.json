@@ -9,7 +9,9 @@
   },
   "scripts": {
     "docgen": "react-docgen ./lib/ --pretty -e index.js -o ./docs/reactdoc.json ",
-    "lint": "eslint *.js lib || true"
+    "lint": "eslint *.js lib",
+    "test": "echo 'Placeholder. No local unit tests currently implemented.'"
+    
   },
   "engines": {
     "node": ">=6.0.0"
