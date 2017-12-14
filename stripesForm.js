@@ -2,7 +2,7 @@ import React from 'react';
 import { reduxForm, SubmissionError } from 'redux-form';
 import StripesFormWrapper from './StripesFormWrapper';
 
-const optWithOnSubmitFail = opts => Object.assign({}, opts, {
+const optWithOnSubmitFail = opts => Object.assign({
   onSubmitFail: (errors, dispatch, submitError) => {
     if (submitError && !(submitError instanceof SubmissionError)) {
       // eslint-disable-next-line no-console
@@ -13,7 +13,7 @@ const optWithOnSubmitFail = opts => Object.assign({}, opts, {
       console.warn(errors);
     }
   },
-});
+}, opts);
 
 export default function stripesForm(opts) {
   return (Form) => {
