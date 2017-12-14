@@ -33,7 +33,7 @@
     "webpack": "1.11.0"
   },
   "dependencies": {
-    "@folio/stripes-components": "^1.7.0",
+    "@folio/stripes-components": "^2.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.3.2",
     "react-router": "^4.1.1",
