@@ -5,10 +5,12 @@ import StripesFormWrapper from './StripesFormWrapper';
 const optWithOnSubmitFail = opts => Object.assign({}, opts, {
   onSubmitFail: (errors, dispatch, submitError) => {
     if (submitError && !(submitError instanceof SubmissionError)) {
-      console.error(submitError); // eslint-disable-line
+      // eslint-disable-next-line no-console
+      console.error(submitError);
       throw new SubmissionError({ message: submitError.message });
     } else {
-      console.warn(errors); // eslint-disable-line
+      // eslint-disable-next-line no-console
+      console.warn(errors);
     }
   },
 });
