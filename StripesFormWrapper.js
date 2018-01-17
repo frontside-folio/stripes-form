@@ -10,7 +10,6 @@ class StripesFormWrapper extends Component {
 
     this.state = {
       openModal: false,
-      isBlocking: false,
       nextLocation: null,
     };
 
@@ -22,7 +21,7 @@ class StripesFormWrapper extends Component {
   componentDidMount() {
     if (this.props.formOptions.navigationCheck) {
       this.unblock = this.props.history.block((nextLocation) => {
-        const shouldPrompt = this.props.dirty && !this.props.submitSucceeded;
+        const shouldPrompt = this.props.dirty && !this.props.submitSucceeded && this.props.history.location.pathname !== nextLocation.pathname;
         if (shouldPrompt) {
           this.setState({
             openModal: true,
@@ -86,6 +85,9 @@ StripesFormWrapper.propTypes = {
   history: PropTypes.shape({
     block: PropTypes.func,
     push: PropTypes.func,
+    location: PropTypes.shape({
+      pathname: PropTypes.string,
+    }),
   }),
   dirty: PropTypes.bool,
   dispatch: PropTypes.func,
