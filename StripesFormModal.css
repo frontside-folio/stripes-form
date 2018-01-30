@@ -1,7 +1,6 @@
 .stripesFormModal button {
-  border-radius: 0px;
-  max-height: 55px;
-  height: 55px;
-  font-weight: bold;
-  font-size: 1.25em;
+  max-height: 44px;
+  height: 44px;
+  font-size: 16px;
+  padding: 0;
 }
