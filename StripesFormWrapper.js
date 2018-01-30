@@ -85,9 +85,6 @@ StripesFormWrapper.propTypes = {
   history: PropTypes.shape({
     block: PropTypes.func,
     push: PropTypes.func,
-    location: PropTypes.shape({
-      pathname: PropTypes.string,
-    }),
   }),
   dirty: PropTypes.bool,
   dispatch: PropTypes.func,
