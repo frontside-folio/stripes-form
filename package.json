@@ -35,11 +35,11 @@
   "dependencies": {
     "@folio/stripes-components": "^2.0.0",
     "prop-types": "^15.5.10",
-    "react": "^15.3.2",
     "react-router": "^4.1.1",
     "redux-form": "^7.0.3"
   },
   "peerDependencies": {
-    "stripes-core": "^2.7.0"
+    "stripes-core": "^2.7.0",
+    "react": "*"
   }
 }
