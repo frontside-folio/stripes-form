@@ -9,7 +9,7 @@ function StripesFormModal(props) {
     <Modal onClose={props.closeCB} size="small" open={props.openWhen} label="There are unsaved changes" dismissible>
       <div className={css.stripesFormModal}>
         {props.remoteSave && <Button onClick={props.saveChanges} fullWidth>Save Changes</Button>}
-        <Button onClick={props.discardChanges} buttonStyle="secondary" fullWidth>Close without saving</Button>
+        <Button onClick={props.discardChanges} fullWidth>Close without saving</Button>
         <Button onClick={props.closeCB} buttonStyle="primary" fullWidth marginBottom0>Keep editing</Button>
       </div>
     </Modal>
