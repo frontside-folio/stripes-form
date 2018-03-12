@@ -20,4 +20,4 @@ This option will cause the navigation prompt to include a "Save Data" option whi
 
     {scrollToError: [true *defaults to false]}
 
-    This option will cause Stripes Form to scroll to the topmost validation error after submitting a form.
+This option will cause Stripes Form to scroll to the topmost validation error after submitting a form.
