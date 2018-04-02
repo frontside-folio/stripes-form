@@ -32,7 +32,9 @@ const scrollToError = (errors) => {
       return currentElementSelector ? currentElement : topMostelement;
     }
   }, null);
-  document.querySelector(`[name="${topMostErrorElement}"]`).scrollIntoView({ top: 0, behavior: 'smooth' });
+
+  const errorElem = document.querySelector(`[name="${topMostErrorElement}"]`);
+  if (errorElem) errorElem.focus();
 };
 
 const optWithOnSubmitFail = opts => Object.assign({
