@@ -30,6 +30,7 @@
     "@folio/stripes-components": "^2.0.0",
     "flat": "^4.0.0",
     "prop-types": "^15.5.10",
+    "react-intl": "^2.4.0",
     "react-router": "^4.1.1",
     "redux-form": "^7.0.3"
   },
