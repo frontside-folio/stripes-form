@@ -5,14 +5,16 @@ import ConfirmationModal from '@folio/stripes-components/lib/ConfirmationModal';
 
 function StripesFormModal(props, context) {
   const unsavedChangesMsg = context.intl.formatMessage({ id: 'stripes-form.unsavedChanges' });
+  const unsavedHeading = context.intl.formatMessage({ id: 'stripes-form.areYouSure' });
 
   return (
     <ConfirmationModal
       open={props.openWhen}
-      heading={unsavedChangesMsg}
-      onConfirm={props.closeCB}
+      message={unsavedChangesMsg}
+      heading={unsavedHeading}
+      onConfirm={props.remoteSave ? props.saveChanges : props.closeCB}
       onCancel={props.discardChanges}
-      confirmLabel={<FormattedMessage id="stripes-form.keepEditing" />}
+      confirmLabel={props.remoteSave ? <FormattedMessage id="stripes-form.saveChanges" /> : <FormattedMessage id="stripes-form.keepEditing" />}
       cancelLabel={<FormattedMessage id="stripes-form.closeWithoutSaving" />}
     />
   );
