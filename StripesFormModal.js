@@ -1,26 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { intlShape, FormattedMessage } from 'react-intl';
-import Modal from '@folio/stripes-components/lib/Modal';
-import Button from '@folio/stripes-components/lib/Button';
-import css from './StripesFormModal.css';
+import ConfirmationModal from '@folio/stripes-components/lib/ConfirmationModal';
 
 function StripesFormModal(props, context) {
   const unsavedChangesMsg = context.intl.formatMessage({ id: 'stripes-form.unsavedChanges' });
+  const unsavedHeading = context.intl.formatMessage({ id: 'stripes-form.areYouSure' });
+
   return (
-    <Modal onClose={props.closeCB} size="small" open={props.openWhen} label={unsavedChangesMsg} dismissible>
-      <div className={css.stripesFormModal}>
-        {
-          props.remoteSave && <Button onClick={props.saveChanges} fullWidth><FormattedMessage id="stripes-form.saveChanges" /></Button>
-        }
-        <Button onClick={props.discardChanges} fullWidth>
-          <FormattedMessage id="stripes-form.closeWithoutSaving" />
-        </Button>
-        <Button onClick={props.closeCB} buttonStyle="primary" fullWidth marginBottom0>
-          <FormattedMessage id="stripes-form.keepEditing" />
-        </Button>
-      </div>
-    </Modal>
+    <ConfirmationModal
+      open={props.openWhen}
+      message={unsavedChangesMsg}
+      heading={unsavedHeading}
+      onConfirm={props.remoteSave ? props.saveChanges : props.closeCB}
+      onCancel={props.discardChanges}
+      confirmLabel={props.remoteSave ? <FormattedMessage id="stripes-form.saveChanges" /> : <FormattedMessage id="stripes-form.keepEditing" />}
+      cancelLabel={<FormattedMessage id="stripes-form.closeWithoutSaving" />}
+    />
   );
 }
 
