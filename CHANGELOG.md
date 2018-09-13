@@ -1,8 +1,8 @@
 # Change history for stripes-form
 
-## [0.9.0](IN PROGRESS)
+## 0.9.0 (https://github.com/folio-org/stripes-form/tree/v0.9.0) (2018-09-13)
 * Added the npm package `flat` to help flatten the nested errors object. Refs STRIPES-467
-* Ignore yarn-error.log file. Refs STRIPES-517. 
+* Ignore yarn-error.log file. Refs STRIPES-517.
 * Correct PropTypes for `<ConfirmationModal>`.
 
 ## [0.8.1](https://github.com/folio-org/stripes-form/tree/v0.8.1) (2017-09-05)
