@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import { submit } from 'redux-form';
+import { LastVisitedContext } from '@folio/stripes-core/src/components/LastVisited';
+
 import StripesFormModal from './StripesFormModal';
 
 class StripesFormWrapper extends Component {
@@ -49,9 +51,10 @@ class StripesFormWrapper extends Component {
     }
   }
 
-  continue() {
+  continue(ctx) {
+    ctx.goBack();
     this.unblock();
-    this.props.history.push(this.state.nextLocation.pathname);
+    this.props.history.replace(this.state.nextLocation.pathname);
   }
 
   closeModal() {
@@ -62,16 +65,20 @@ class StripesFormWrapper extends Component {
 
   render() {
     return (
-      <div>
-        <this.props.Form {...this.props} />
-        <StripesFormModal
-          openWhen={this.state.openModal}
-          saveChanges={this.saveChanges}
-          discardChanges={this.continue}
-          remoteSave={this.props.formOptions.allowRemoteSave}
-          closeCB={this.closeModal}
-        />
-      </div>
+      <LastVisitedContext.Consumer>
+        { ctx => (
+          <div>
+            <this.props.Form {...this.props} />
+            <StripesFormModal
+              openWhen={this.state.openModal}
+              saveChanges={this.saveChanges}
+              discardChanges={() => this.continue(ctx)}
+              remoteSave={this.props.formOptions.allowRemoteSave}
+              closeCB={this.closeModal}
+            />
+          </div>
+        )}
+      </LastVisitedContext.Consumer>
     );
   }
 }
