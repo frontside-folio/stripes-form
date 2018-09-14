@@ -27,7 +27,6 @@
     "webpack": "^4.10.2"
   },
   "dependencies": {
-    "@folio/stripes-components": "^3.0.0",
     "flat": "^4.0.0",
     "prop-types": "^15.5.10",
     "react-intl": "^2.4.0",
@@ -35,6 +34,7 @@
     "redux-form": "^7.0.3"
   },
   "peerDependencies": {
+    "@folio/stripes-components": "^3.0.0",
     "@folio/stripes-core": "^2.7.0",
     "react": "*"
   }
