@@ -52,9 +52,10 @@ class StripesFormWrapper extends Component {
   }
 
   continue(ctx) {
-    ctx.goBack();
+    ctx.cachePreviousUrl();
     this.unblock();
-    this.props.history.replace(this.state.nextLocation.pathname);
+
+    this.props.history.push(this.state.nextLocation.pathname);
   }
 
   closeModal() {
