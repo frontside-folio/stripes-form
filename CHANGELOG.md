@@ -1,6 +1,6 @@
 # Change history for stripes-form
 
-## 1.0.0 (IN PROGRESS)
+## [1.0.0](https://github.com/folio-org/stripes-form/tree/v1.0.0) (2018-09-18)
 * Close record when `Close without saving` button is used. Refs STCOR-254.
 
 ## [0.9.0](https://github.com/folio-org/stripes-form/tree/v0.9.0) (2018-09-13)
