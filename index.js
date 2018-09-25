@@ -1,1 +1,1 @@
-export { default } from './stripesForm';
+export { default } from './lib/stripesForm';
