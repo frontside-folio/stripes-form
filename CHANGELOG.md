@@ -1,5 +1,8 @@
 # Change history for stripes-form
 
+## [1.1.0](https://github.com/folio-org/stripes-form/tree/v1.1.0) (2018-10-02)
+* Move `stripes-core` to dependencies.
+
 ## [1.0.0](https://github.com/folio-org/stripes-form/tree/v1.0.0) (2018-09-18)
 * Close record when `Close without saving` button is used. Refs STCOR-254.
 
