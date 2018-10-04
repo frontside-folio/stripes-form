@@ -1,5 +1,9 @@
 # Change history for stripes-form
 
+## 1.2.0 (IN PROGRESS)
+
+* Fix typo in `package.json`'s repository value.
+
 ## [1.1.0](https://github.com/folio-org/stripes-form/tree/v1.1.0) (2018-10-02)
 * Move `stripes-core` to dependencies.
 
