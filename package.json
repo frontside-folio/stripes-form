@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "Form state management in Stripes.",
   "license": "Apache-2.0",
-  "repository": "folio-org/stripes-expermiments/stripes-form",
+  "repository": "folio-org/stripes-form",
   "publishConfig": {
     "registry": "https://repository.folio.org/repository/npm-folio/"
   },
