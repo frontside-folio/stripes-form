@@ -1,5 +1,8 @@
 # Change history for stripes-form
 
+## 1.2.0 (IN PROGRESS)
+* Replace `formatMessage()` with `<FormattedMessage>`
+
 ## [1.1.1](https://github.com/folio-org/stripes-form/tree/v1.1.1) (2018-11-01)
 * Fix typo in `package.json`'s repository value.
 * Replace div in wrapper component with Fragment
