@@ -1,6 +1,6 @@
 # Change history for stripes-form
 
-## 1.2.0 (IN PROGRESS)
+## [1.2.0](https://github.com/folio-org/stripes-form/tree/v1.2.0) (2018-11-29)
 * Replace `formatMessage()` with `<FormattedMessage>`
 
 ## [1.1.1](https://github.com/folio-org/stripes-form/tree/v1.1.1) (2018-11-01)
