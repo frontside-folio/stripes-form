@@ -1,7 +1,8 @@
 # Change history for stripes-form
 
-## 1.3.0 (IN PROGRESS)
+## [1.3.0](https://github.com/folio-org/stripes-form/tree/v1.3.0) (2019-01-16)
 * Correctly locate translation files. Fixes STFORM-5.
+* Increment `stripes-core` and `stripes-components` versions
 
 ## [1.2.0](https://github.com/folio-org/stripes-form/tree/v1.2.0) (2018-11-29)
 * Replace `formatMessage()` with `<FormattedMessage>`
